@@ -5,20 +5,20 @@ console.log(s);
 const Navbar = () => {
   return (
     <nav className={s.nav}>
-      <div>
-        <a className={s.item}>Profile</a>
+      <div className={s.item}>
+        <a href='/profile'>Profile</a>
       </div>
-      <div>
-        <a className={`${s.item} ${s.active}`}>Messages</a>
+      <div className={`${s.item} ${s.active}`}>
+        <a href='/dialogs'>Messages</a>
       </div>
-      <div>
-        <a className={s.item}>News</a>
+      <div className={s.item}>
+        <a>News</a>
       </div>
-      <div>
-        <a className={s.item}>Music</a>
+      <div className={s.item}>
+        <a>Music</a>
       </div>
-      <div>
-        <a className={s.item}>Settings</a>
+      <div className={s.item}>
+        <a>Settings</a>
       </div>
     </nav>
   );
