@@ -8,6 +8,7 @@ let state = {
       { id: 3, message: 'Hi, how are you2', likesCount: 13 },
       { id: 4, message: "It's my first post2", likesCount: 12 },
     ],
+    newPostText: 'Replace this text',
   },
   dialogsPage: {
     dialogs: [
@@ -30,15 +31,23 @@ let state = {
   sidebar: {},
 };
 
-export let addPost = (postMessage) => {
+window.state = state;
+
+export let addPost = () => {
   let newPost = {
     id: 5,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likesCount: 0,
   };
 
   state.profilePage.posts.push(newPost);
-  reranderEntireTree();
+  reranderEntireTree(state);
+  state.profilePage.newPostText = '';
+};
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  reranderEntireTree(state);
 };
 
 export default state;
