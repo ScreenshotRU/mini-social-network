@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
-// addPost('Samurai.js.com');
+// addPost('Samurai.js.com');--
 
 export let rerenderEntireTree = (state) => {
   ReactDOM.render(
